@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Golf Game</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="top-bar">
+        <div>
+          <p class="eyebrow" id="course-name">Meadow Park</p>
+          <h1 id="hole-title">Hole 1</h1>
+        </div>
+        <p class="status" id="status">Loading course…</p>
+      </header>
+
+      <div class="layout">
+        <section class="stage" aria-label="Hole view">
+          <canvas id="fairway" width="640" height="860"></canvas>
+        </section>
+
+        <aside class="panel">
+          <section class="card">
+            <h2>Shot</h2>
+            <dl class="facts" id="shot-facts"></dl>
+            <label class="field">
+              <span>Club</span>
+              <select id="club"></select>
+            </label>
+            <label class="field">
+              <span>Power <strong id="power-label">80%</strong></span>
+              <input id="power" type="range" min="1" max="100" value="80">
+            </label>
+            <div class="meter" aria-hidden="true">
+              <div class="meter-fill" id="power-meter"></div>
+            </div>
+            <div class="actions">
+              <button type="button" class="primary" id="shot-button">Hold to swing</button>
+              <button type="button" id="aim-hole">Aim at cup</button>
+            </div>
+            <p class="hint">
+              Drag on the course or use the left and right keys to aim.
+              Hold the swing button (or the space bar) to fill power, then release.
+              Up and down keys change club.
+            </p>
+          </section>
+
+          <section class="card">
+            <h2>Scorecard</h2>
+            <div class="table-wrap">
+              <table id="scorecard">
+                <thead>
+                  <tr>
+                    <th>Hole</th>
+                    <th>Par</th>
+                    <th>SI</th>
+                    <th>Strokes</th>
+                    <th>Pts</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot></tfoot>
+              </table>
+            </div>
+            <button type="button" class="primary" id="next-hole" hidden>Next hole</button>
+          </section>
+        </aside>
+      </div>
+    </div>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

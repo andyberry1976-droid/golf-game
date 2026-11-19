@@ -1,0 +1,10 @@
+{
+  "courses": [
+    {
+      "id": "meadow-park",
+      "name": "Meadow Park",
+      "file": "meadow-park.json",
+      "holes": 3
+    }
+  ]
+}
